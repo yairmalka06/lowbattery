@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   size = g.memberCount
   })
 var embed = new Discord.RichEmbed()
-.addField("מספר האנשים בשרת הוא "," ",size)
+.addField("מספר האנשים בשרת הוא ",size)
   message.channel.send(embed);
 }
 module.exports.help = {
