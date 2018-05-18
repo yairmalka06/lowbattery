@@ -30,12 +30,20 @@ fs.readdir("./commands/", (err, files) => {
 
 bot .on("guildMemberAdd",function(member)
 {
+  bot.guilds.forEach(g =>{
+  size = g.memberCount
+  })
+  bot.user.setActivity(`${size} דגי רקק בשרת`, {type: "PLAYING"});
       member.guild.channels.find("name","🙌welcome_bye🙌").sendMessage("היי"+" "+member.toString()+" "+"מבינים שאין לך בטריה");
        var Lowrole = member.guild.roles.find("name", "🔋Low batteries🔋");
        member.addRole(Lowrole);
 });
 bot .on("guildMemberRemove",function(member)
 {
+  bot.guilds.forEach(g =>{
+  size = g.memberCount
+  })
+  bot.user.setActivity(`${size} דגי רקק בשרת`, {type: "PLAYING"});
   member.guild.channels.find("name","🙌welcome_bye🙌").sendMessage("יצא מהשרת"+" "+member.toString()+" "+"האחרון שיצא 😉");
 });
 bot.on("ready", function(){
@@ -44,7 +52,7 @@ bot.on("ready", function(){
     bot.guilds.forEach(g =>{
     size = g.memberCount
     })
-    bot.user.setActivity(`${size} דגי רקק בשרת`,{type: "PLAGING"});
+    bot.user.setActivity(`${size} דגי רקק בשרת`, {type: "PLAYING"});
 });
 
 bot.on("message", function(message)
