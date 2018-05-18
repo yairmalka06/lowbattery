@@ -44,7 +44,7 @@ bot.on("ready", function(){
     bot.guilds.forEach(g =>{
     size = g.memberCount
     })
-    bot.user.setGame(size +" "+"דגי רקק בשרת");
+    bot.user.setActivity(size," "+"דגי רקק בשרת" {type: "PLAGING"});
 });
 
 bot.on("message", function(message)
