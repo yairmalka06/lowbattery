@@ -31,7 +31,7 @@ fs.readdir("./commands/", (err, files) => {
 bot .on("guildMemberAdd",function(member)
 {
       member.guild.channels.find("name","🙌welcome_bye🙌").sendMessage("היי"+" "+member.toString()+" "+"מבינים שאין לך בטריה");
-       var Lowrole = member.guild.roles.find("name", "🔋Low Batterys🔋");
+       var Lowrole = member.guild.roles.find("name", "🔋Low batteries🔋");
        member.addRole(Lowrole);
 });
 bot .on("guildMemberRemove",function(member)
